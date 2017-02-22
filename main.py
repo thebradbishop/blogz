@@ -263,7 +263,7 @@ class LoginHandler(BlogHandler):
     def render_login_form(self, error=""):
         """ Render the login form with or without an error, based on parameters """
         t = jinja_env.get_template("login.html")
-        response = t.render(error=error)
+        response = t.render(error=error) #Need to add error processing on this!
         self.response.out.write(response)
 
     def get(self):
